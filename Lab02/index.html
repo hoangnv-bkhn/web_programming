@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Simple Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+        form {
+            margin: 0 auto;
+            width:75%;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<form action="index.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+    <label for="class">Class:</label>
+    <input type="text" id="class" name="class"><br>
+    <label for="univ">University:</label>
+    <input type="text" id="univ" name="univ"><br><br>
+    Your hobby is: <br>
+    <input type="checkbox" id="hb1" name="hobbies[]" value="Watch TV">
+    <label for="hb1"> Watch TV</label><br>
+    <input type="checkbox" id="hb2" name="hobbies[]" value="Listen to music">
+    <label for="hb2"> Listen to music</label><br>
+    <input type="checkbox" id="hb3" name="hobbies[]" value="Read books">
+    <label for="hb3"> Read books</label><br>
+    <input type="checkbox" id="hb4" name="hobbies[]" value="Hang out with friends">
+    <label for="hb4"> Hang out with friends</label><br>
+    <input type="checkbox" id="hb5" name="hobbies[]" value="Go to the pub">
+    <label for="hb5"> Go to the pub</label><br><br>
+    <p>Please select your favorite Web language:</p>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
