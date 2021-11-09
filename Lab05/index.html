@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web page generator</title>
+
+</head>
+<body style="width:800px; margin:0 auto; padding: 20px 20px">
+<form action="GeneratePage.php" method="post">
+  <h1>Create Page:</h1>
+  <table>
+    <tr>
+      <td>
+        <label>Title</label>
+      </td>
+      <td>
+        <input type="text" size="50" name="title" value=""/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Year</label>
+      </td>
+      <td>
+        <input type="text" size="50" name="year" value=""/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Copyright</label>
+      </td>
+      <td>
+        <input type="text" size="50" name="copyright" value=""/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Content</label>
+      </td>
+      <td>
+                    <textarea name="content" value=""
+                              cols="50" rows="10">
+                    </textarea>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <p>Select color for page content: </p>
+  <input type="radio" name="page_type" value="Default" checked>
+  <label> Default</label>
+  <input type="radio" name="page_type" value="Red">
+  <label> Red</label>
+
+  <br/>
+
+  <br/><br/>
+  <input type="submit" value="Submit"/>
+
+</form>
+
+</body>
+</html>

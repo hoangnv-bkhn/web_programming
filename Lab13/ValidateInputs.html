@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Validate Form</title>
+    <style>
+        body {
+            width:800px;
+            margin:0 auto;
+            padding: 20px 20px;
+        }
+        #submitButton {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Validate Form</h1>
+<form onsubmit="displayresult()" id="form">
+    <label>Username: </label><br/>
+    <input type="text" size="30" name="username" id="username" required><br/>
+    <label>Email Address: </label><br/>
+    <input type="email" size="30" name="email" id="email" required
+           pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})$"><br/>
+    <label>Phone number: </label><br/>
+    <input type="tel" size="30" name="phonenumber" id="phonenumber" required
+           pattern="^([0]{1}[0-9]{9}|[0]{1}[0-9]{10})$"><br/>
+    <input type="submit" value="Submit" id="submitButton">
+</form>
+<p>
+<div id="result">
+
+</div>
+</p>
+</body>
+
+<script>
+    document.getElementById("form").addEventListener('submit', function (event) { event.preventDefault(); });
+    function displayresult() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var tel = document.getElementById("phonenumber").value;
+        var result = document.getElementById("result");
+        while (result.firstChild) {
+            result.firstChild.remove();
+        }
+        var usernamenode = document.createElement('li');
+        usernamenode.innerText = "Username: " + username;
+        var emailnode = document.createElement('li');
+        emailnode.innerText = "Email: " + email;
+        var telnode = document.createElement('li');
+        telnode.innerText = "Phone number: " + tel;
+        result.appendChild(usernamenode);
+        result.appendChild(emailnode);
+        result.appendChild(telnode);
+    }
+</script>
+
+</html>
